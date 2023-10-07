@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Project Template
 
-## Getting Started
+This is a Next.js project template that includes installations for various libraries and tools to kickstart your development.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+-   Integration of Zod for schema validation
+-   Integration of React Hook Form for efficient form management
+-   Integration of Hook Form Resolvers for advanced form validation
+-   Setup of Testing Library and Jest for testing components and utilities
+-   Integration of Next PWA for Progressive Web App functionality
+-   Integration of Tailwind CSS for styling
+-   Usage of Tailwind Merge for utility-first CSS
+-   Usage of clsx for conditional CSS classes
+-   Integration of shadcn/ui for additional UI components
+-   Enhanced Webpack configuration
+
+## Installation
+
+Clone the repository:
+
+```sh
+git clone <repository_url>
+cd nextjs-project-template
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install dependencies using npm:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm i
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Start the development server:
 
-## Learn More
+```sh
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Access the application at http://localhost:3000.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Run tests using Jest:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```sh
+npm test
+```
