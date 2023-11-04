@@ -1,8 +1,6 @@
 import '@/styles/globals.css';
+import { GeistSans } from 'geist/font';
 import type { Metadata } from 'next';
-import { Montserrat } from 'next/font/google';
-
-const montserrat = Montserrat({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -15,8 +13,8 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang='en'>
-			<body className={montserrat.className}>{children}</body>
+		<html lang='pt-BR' className={GeistSans.className}>
+			<body>{children}</body>
 		</html>
 	);
 }
