@@ -1,0 +1,38 @@
+name: pipeline
+
+on:
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    main:
+        name: main
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [20.x]
+
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: using node version ${{ matrix.node-version }}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+
+            - name: install dependencies
+              run: npm i
+
+            - name: lint with prettier
+              run: npm run prettier:check
+
+            - name: run tests with jest
+              run: npm run jest
+
+            - name: run e2e tests with cypress
+              run: npm run e2e
+
+            - name: build project
+              run: npm run build

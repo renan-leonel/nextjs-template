@@ -1,5 +1,7 @@
-const Page = () => {
-    return <main></main>;
-};
-
-export default Page;
+export default function Page() {
+    return (
+        <main>
+            <h1>example text</h1>
+        </main>
+    );
+}
